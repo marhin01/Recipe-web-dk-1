@@ -603,7 +603,12 @@ body {
 }
 
 
+/* her starter footer */
 
+.footer-container-12column {
+  width: var(--width-12col);
+  margin: auto;
+}
 
 .footer-container {
   margin: auto;
@@ -611,7 +616,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-content: center;
-  background-color: rgba(191, 91, 35, 1);
+  background-color: #D0C5AE;
   width: var(--width-full);
   height: 147px;
   font-size: 13px;
@@ -930,10 +935,14 @@ fieldset {
 }
 
 .instructions_selection_container {
-  columns: 2;
-  display: flex;
-  margin: 30px 0 0 60px;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+  height: fit-content;
+  margin: 30px auto 0 auto;
+  box-sizing: border-box;
+  width: var(--width-12col);
+  
   
 }
 .instructions_selection_list li {
@@ -941,6 +950,7 @@ fieldset {
   height: auto;
   font-size: 14px;
   margin-bottom: 10px;
+  margin: 25px;
   line-height: 26px;
   font-weight: 400px;
   color: var(--background-color-light);
@@ -950,14 +960,14 @@ fieldset {
 
 .instructions_ingredients{
   color: var(--background-color-light);
-
-  width: 367px;
-  height: 432px;
+  width: auto;
+  height: auto;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400px;
- 
-  padding: 20px;
+  padding: 20px 40px;
+  margin: 25px 0 auto 100px;
+
 }
 
 .instructions_selection_headline_subpage_bottom {
@@ -967,38 +977,294 @@ fieldset {
   font-size: 37px;
   font-weight: 700;
   text-transform: uppercase;
-  display:flex;
+  display:grid;
   justify-content: space-between;
-  padding: 0 0 20 0;
+  padding: 0 0 20px 0;
   width: var(--width-12col);
   margin: 70px auto 0 auto;
   text-shadow: 1px 1px 3px var(--primary-color);
 }
 
 .instructions_selection_container_bottom {
-    columns: 2;
-    display: flex;
-    margin: 30px 0 70px 60px;
-    justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+  height: fit-content;
+  margin: 30px auto auto auto;
+  box-sizing: border-box;
+  width: var(--width-12col);
  }
  
+
+
+      
+
+ 
 .instructions_selection_container_bottom_list_vertical li {
-  width: 560px;
+  width: var(--width-full);
   height: auto;
   font-size: 14px;
   margin-bottom: 10px;
   line-height: 26px;
   font-weight: 400px;
   color: var(--background-color-light);
-  padding: 20px;
-  
-}
-.instructions_selection_container_bottom_list_vertical ol li::marker {
-  color: var(--primary-color);
-  content: "step 1";
-  text-transform: uppercase;
-  direction: rtl;
-  
+  padding: 15px;
 
+
+}
+
+/* Steps delen herunder har jeg benyttet lidt hjælp fra chat gpt */
+.steps {
+  list-style-type: none; /* Remove default numbering */
+  padding-left: 0;
+}
+.steps li {
+  position: relative;
+  padding-left: 40px; /* Give some space for the custom marker */
+  font-size: 16px;
+  margin: 10px 0 ;
+}
+
+.steps li::before {
+  content: "Step " counter(step-counter) ; /* Add "Step" before the number */
+  counter-increment: step-counter; /* Increment the counter for each list item */
+  position:absolute;
+  margin: 70px 0;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  bottom: 20px;
+  transform: rotate(-90deg); /* Rotate the number */
+  transform-origin: left center; /* Ensure the rotation is around the left side */
+  font-weight: bold; /* Make the text bold */
+  color: var(--primary-color); /* Change color if needed */
+  text-transform: uppercase;
+
+}
+
+.steps {
+  counter-reset: step-counter; /* Initialize the counter for the list */
+}
+.instructions_ingredients_bottom{
+  color: var(--background-color-light);
+  width: auto;
+  height: auto;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400px;
+  padding: 20px 40px;
+  margin: 25px 0 auto 100px;
+ }
+.container-filler {
+  width: var(--width-12col);
+  height: 600px;
+ 
+}
+  /* want to rotate the marker in a ol>li and i want to add "step " in front of each number. step 1, step 2, and so on. Use the counter- */
+  
+/* start about page - my page */
+
+
+.about{
+  background-color: #D0C5AE;
+  font-family: "philosofer", sans-serif;
+}
+
+.container-about {
+  background: rgb(2,0,36);
+  background: #F5F5F5;
+  width:var(--width-full);
+  height:auto;
+}
+
+.navigation-about {
+  background-color: #D0C5AE;
+  position:relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+}
+
+
+
+.menu-container-about {
+  width:var(--width-12col);
+  margin: 0 auto;
+}
+
+.menu-container-about ul {
+  display:flex;
   
 }
+
+.menu-container-about ul li {
+  list-style-type: none;
+  margin:10px 0 10px 0;
+}
+
+.menu-container-about ul li a {
+  color:rgb(1, 1, 36);
+  text-decoration: none;
+  text-transform: uppercase;
+  border-right: 1px solid rgb(1, 1, 36);
+  padding: 0 10px 0 10px;
+}
+
+.menu-container-about ul li a:hover {
+  color:rgb(148, 139, 147);
+}
+
+.menu-container-about ul li:last-child a {
+  border-right: none;
+  
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links li a:hover {
+  color: #ddd;
+}
+
+/* Styling for the search container */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+#search-box {
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #555;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+
+.about-hero-section { /* Parent with 100% width*/
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  height:auto;
+  min-height:600px;
+  
+  padding: 20px;
+  margin-top:-40px;
+  color:#061e22;
+} 
+
+.about-hero-container {/* child to follow to 12 column */
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+  width:var(--width-12col);
+  gap:var(--grid-gap);
+  margin: 0 auto;
+} 
+
+.about-hero-text {
+  grid-column: 1 / span 4;
+  margin-top:200px;
+  grid-row: 1;
+  padding: 20px;
+}
+
+.about-hero-text-small-header {
+  font-size:12px;
+}
+
+.about-hero-text-big-header {
+  font-size:32px;
+  text-transform: uppercase;
+}
+
+.about-hero-text-bold {
+  font-weight: 900;
+}
+
+
+.about-hero-text-smallest {
+  font-size: 12px;
+}
+
+.about-hero-text-medium {
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-top:15px;
+ }
+
+.about-hero-text-large {
+  font-size: 67px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-top:5px;
+  margin-bottom:15px;
+  
+}
+
+
+
+
+
+
+
+@media (max-width < 599px) {
+  body {
+    background-color: #111111;
+    flex-direction: column;
+  }
+  .container {
+    flex-direction: column;
+}
+  footer {
+    position: relative;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 900px)  {
+  body {
+    flex-direction: row;
+    justify-content: space-between;
+}
+ }
+
+@media (min-width < 900px) {
+  body {
+    background-color: #111111;
+    flex-direction: row;
+  }
+  .footer {
+    position: static;
+
+  }
+}
+
+
+
