@@ -181,6 +181,9 @@ body {
 
   
 }
+.search-box {
+  height: 1.5rem;
+}
  
 .search-box::placeholder {
   color:var(--background-color-light);
@@ -1705,10 +1708,11 @@ button:hover {
   
   .hero-container {
     width: 100%;
+    margin: auto;
+
   }
   .hero-text {
-    margin: 200px auto auto auto;
-
+    margin: 0;
   
   }
   .hero-text-big-header {
@@ -1717,7 +1721,9 @@ button:hover {
   .menu-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-  
+    margin: auto;
+    width: 100%;
+    
   }
 
   .mobile_look {
@@ -1725,7 +1731,10 @@ button:hover {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    width: 100%;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+   
   }
   /* Adjust the search box */
   .hero-search {
@@ -1733,9 +1742,21 @@ button:hover {
     margin-top: 20px;
     margin: 5px;  
   }
+  .hero-search i {
+    position: absolute;
+  }
+
+  .search-box {
+    height: 2.5em;
+    
+  }
+  .search-box::placeholder {
+    padding: 30px;
+  }
   .todays_recipes_headline {
     font-size: 24px;
     width: 100%;
+    border-bottom: none;
   }
   .todays_recipes_content {
     grid-template-columns: 1fr;
@@ -1801,14 +1822,10 @@ button:hover {
     margin: 10px 0;
   }
 
-  .menu-icon {
-    display: flex;
-  }
-
-
   .category_selection_headline {
     font-size: 24px;
     width: 100%;
+    border-bottom: none;
   }
   .category_selection {
     flex-direction: column;
@@ -1827,6 +1844,9 @@ button:hover {
  
   .in_the_kitchen_grid_container img {
     display: none;
+  }
+  .in_the_kitchen_headline {
+    border-bottom: none;
   }
 
 
@@ -1949,6 +1969,9 @@ button:hover {
     width: 179px;
     font-size: 20px; 
   }
+  .search-box {
+    height: 2rem;
+  }
   .todays_recipes_headline {
     font-size: 24px;
     width: 100%;
@@ -2028,8 +2051,8 @@ button:hover {
     font-size: 28px;
   }
   .todays_recipes_content {
-    grid-template-columns: 1fr;
-    display: block;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
     max-width: 100%;
   }
 
@@ -2073,6 +2096,14 @@ button:hover {
 
   .in_the_kitchen_grid_container img {
     display: none;
+  }
+  .footer-container {
+    padding: 10px;
+    line-break: anywhere;
+    font-size: 8px;
+  }
+  .footer-content-2 {
+    border: none;
   }
 }
 
