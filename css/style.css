@@ -1709,10 +1709,9 @@ button:hover {
   .hero-container {
     width: 100%;
     margin: auto;
-
   }
   .hero-text {
-    margin: 0;
+    margin: auto;
   
   }
   .hero-text-big-header {
@@ -1729,7 +1728,7 @@ button:hover {
   .mobile_look {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     cursor: pointer;
     width: 40px;
     height: 40px;
@@ -1920,7 +1919,9 @@ button:hover {
 @media (width < 768px) {
   .hero-container {
     grid-template-columns: repeat(6, 1fr);
+    
   }
+
   .nav-links {
     display: none;
     width: 100%;
@@ -1941,10 +1942,6 @@ button:hover {
     text-align: center;
     width: 100%;
     margin: 10px 0;
-  }
-
-  .menu-icon {
-    display: flex;
   }
 
   .menu-container ul {
@@ -2078,7 +2075,7 @@ button:hover {
     clip-path: none;
   }
   .content_image_container {
-    width: 50%;
+    width: 80%;
     display: flex;
     justify-content: center;
    
